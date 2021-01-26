@@ -95,6 +95,40 @@ def Root(number):
   except Exception as e:
     print(e)
 
+def Percentage(number, percent):
+  try:
+    percent1 = (number * percent)/100
+    return percent1
+  except Exception as e:
+    print(e)
+
+def Factorial(number):
+  try:
+    fact = math.factorial(number)
+    return fact
+  except Exception as e:
+    print(e)
+
+def SinInverse(number):
+  try:
+    inverse = math.asin(number)
+    return inverse
+  except Exception as e:
+    print(e)
+
+def CosInverse(number):
+  try:
+    inverse = math.acos(number)
+    return inverse
+  except Exception as e:
+    print(e)
+
+def TanInverse(number):
+  try:
+    inverse = math.atan(number)
+    return inverse
+  except Exception as e:
+    print(e)
 
 #Calculator Functions
 
@@ -115,8 +149,11 @@ Input 11 for Permutation
 Input 12 for Combination
 Input 13 for finding the power of a number
 Input 14 for finding root of a number
-Input 15 for finding nth term of a nthTermsGP
-Input 16 for finding sum of a GP'''))
+Input 15 for finding the percentage of a number
+Input 16 for finding the factorial of a number
+Input 17 for finding the sin inverse of a number
+Input 18 for finding the cos inverse of a number
+input 19 for finding the tan inverse of a number'''))
 
 #Commands
 
@@ -150,6 +187,12 @@ if(userInput == 13):
 if(userInput == 14):
   number = int(input("Enter the number whom you want to root"))
 
+if(userInput == 15):
+  number = int(input("Enter the number"))
+  percentage = int(input("Enter the percentage"))
+
+if(userInput == 16 or userInput == 17 or userInput == 18 or userInput == 19):
+  number2 = int(input("Enter the number"))
 else:
   print("Please enter a valid input")
 
@@ -185,5 +228,14 @@ if(userInput == 13):
   print("The answer is", PowerRaised(number, power))
 if(userInput == 14):
   print("The answer is", Root(number))
-
+if(userInput == 15):
+  print("The answer is", Percentage(number,percentage))
+if(userInput == 16):
+  print("The factorial is", Factorial(number2))
+if(userInput == 17):
+  print("The sin inverse is", SinInverse(number2))
+if(userInput == 18):
+  print("The cos inverse is",CosInverse(number2))
+if(userInput == 19):
+  print("The of tan inverse is", TanInverse(number2))
 # The return statements
